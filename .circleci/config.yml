@@ -24,6 +24,7 @@ jobs:
           command: mvn test
       - store_artifacts:
           path: /tmp/artifacts
+          destination: artifact-file
 
 workflows:
   # Below is the definition of your workflow.
