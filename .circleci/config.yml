@@ -22,9 +22,8 @@ jobs:
       - run:
           name: Test
           command: mvn test
-      - run:
-          name: Publish
-          command: mv target/*.war $CIRCLE_ARTIFACTS/
+      - store_artifacts:
+          path: /tmp/artifacts
 
 workflows:
   # Below is the definition of your workflow.
